@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mafia Conflict</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style>
+  /* Reset & Base */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html {
+    font-family: 'Cairo', sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at bottom, #2a001f, #110011 80%);
+    position: relative;
+  }
+
+  /* Background Wrapper */
+  .background-wrapper {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  /* Stars */
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(1.4); }
+}
+
+  /* Clouds */
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    filter: blur(30px);
+    animation: floatClouds linear infinite;
+    z-index: 2;
+}
+
+@keyframes floatClouds {
+    from { transform: translateX(-200px); }
+    to { transform: translateX(130vw); }
+}
+
+.cloud1 { width: 350px; height: 120px; top: 100px; animation-duration: 90s; }
+.cloud2 { width: 400px; height: 150px; top: 300px; animation-duration: 130s; }
+.cloud3 { width: 300px; height: 100px; top: 500px; animation-duration: 110s; }
+
+  /* Sparkles */
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fff, #f0f);
+    opacity: 0.7;
+    animation: floatUp 6s linear infinite;
+    z-index: 3;
+}
+
+@keyframes floatUp {
+    0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    }
+    100% {
+    transform: translateY(-100vh) scale(0.8);
+    opacity: 0;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<!-- ⭐ الخلفية المتحركة كلها هنا -->
+<div class="background-wrapper">
+    <div class="stars" id="stars"></div>
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+    <div id="sparkles"></div>
+</div>
+
+    <header>
+        <a href="secret.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+    </header>
+    <h2>Legends in the Dark</h2>
+    <div class="timeline">
+    <div class="line"></div>
+    <div class="timeline-event left1">
+        <div class="event-title">صافح عدوك </div>
+        <div class="event-description">الدبلوماسية هي أن تداعب الكلب بلطف حتى تجد حجرا تضربه به</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title"> الملك في اللعبة</div>
+        <div class="event-description">كؤوس الاستسلام في عقيدتي...خمور محرمة...</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title">حين تمطر رصاصا </div>
+        <div class="event-description">...كلمة رجل جمعها رجال وكلمة أمرأة لا جمع لها...</div>
+                <div class="event-description">المرأة لها كبرياء حتى في اللغة العربية تأبى أن تجمعها بغيرها أو تقارنها بها</div>
+
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">عائلة أوغاد </div>
+        <div class="event-description">سألته غاضبة:"لو أنني أعلم كيف أقتلك ثم أعيدك للحياة مرة اخرى..."</div>
+                <div class="event-description">فأجابها:"قبليني من عنقي.."</div>
+
+    </div>
+    <div class="timeline-event left1">
+        <div class="event-title">الانعكاس المزيف </div>
+        <div class="event-description">قال لها: "أحبك وكلام الملوك لا يعاد.."</div>
+                <div class="event-description">قالت له: "وبصفتي الملكة..امرك ان تعيدها.."</div>
+
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title">اتباع الخيط </div>
+        <div class="event-description">عندما تتحدث امرأة انصت الى ما تقوله عيناها...</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title">ملاك وسط أفاعي </div>
+        <div class="event-description">اذا حفرت لي حفرة..احفرها جيدا لأنني اذا استطعت الخروج منها ستدفع الثمن غاليا</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">وردة في أرض الرب</div>
+        <div class="event-description">عندما تبدأ في اطلاق النار يجب ان تستعد تماما لتلقي البعض منها</div>
+    </div>
+    <div class="timeline-event left1">
+        <div class="event-title">الفاديتا للفاديتا</div>
+        <div class="event-description">لا بأس بتقليد من تحترم لكن لا تتمادى في ذلك فتصبح نسخة منه</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title">ظهور الروي</div>
+        <div class="event-description">أبسط طريقة لمخالفة القوانين هي التظاهر بأنك تنفذها..</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title">أعداء الحب</div>
+        <div class="event-description">اذا كان وجودي يزعج الاخرين فمرحبا بوجودي وتبا للاخرين...</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">أميرة من روسيا</div>
+        <div class="event-description">من يرمينا بالرصاص..نرميه بالورود..ولكن على قبره..</div>
+    </div>
+    <div class="timeline-event left1">
+        <div class="event-title">من المكسيك</div>
+        <div class="event-description">هي ليست كالبقية تركض خلف الانتباه..الانتباه بحد ذاته يلتفت لها..</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title">دمية بين الحيوانات</div>
+        <div class="event-description">"سألوها: لماذا تعانقين من تكرهين؟ فأجابت: لأقيس حجمهم وأحفر القبر وفقاً لذلك..."</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title">أفاعي الأدغال</div>
+        <div class="event-description">"سألوه لماذا ترتدي الأسود دوماً... فأجاب: لأنني دوماً مستعد لجنائزكم..."</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">منزل على الحدود</div>
+        <div class="event-description">"كانت تنام مع الذئاب دون خوف... ذلك لأن الذئاب يعلمون أن لبؤة بينهم..."
+
+</div>
+    </div>
+    <div class="timeline-event left1">
+        <div class="event-title"> راهبة من كابوس</div>
+        <div class="event-description">"لم تكن شخصاً يطارد... كانت شخصاً يحتل... وكل من وقف أمامها سقط كما سقطت روما..."</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title">تاريخ قديم</div>
+        <div class="event-description">"جميعهم أتوا طمعا في تاجها... بينما هي غادرت برؤوسهم بين يديها..."</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title">حب أم عداوة؟</div>
+        <div class="event-description">"إذا كنت لا تستطيع مواجهة الذئاب... لا تدخل الغابة..."</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">حكام العالم الحديث</div>
+        <div class="event-description">"لا تنبح أبدا... إذا كنت غير قادر على العض..."</div>
+    </div>
+    <div class="timeline-event left1">
+        <div class="event-title">أحفاد هتلر</div>
+        <div class="event-description">"حين تظهر أنيابك للذئب... كن مستعداً لمخالبه..."</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title"> حين يركع النبلاء</div>
+        <div class="event-description">القاعدة كانت بسيطة:
+"اجعلها جميلة... لكن دربها على القتل..."</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title">أفعى ضد ملوك</div>
+        <div class="event-description">"في القتال كانا خطيران... وحول بعضهما ينصهران..."</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">أسياد الحب والموت</div>
+        <div class="event-description">"ما أرتديه فوق رأسي ليس تاجًا... بل بالذهب قمت بتغطية قرون الشيطان."</div>
+
+    </div><div class="timeline-event left1">
+        <div class="event-title">ممنوع القتل داخل المستشفى</div>
+        <div class="event-description">"كانت تلعب مع شياطينها تسمح لهم بالقيادة... وفي اللحظة التي يعتقدون فيها أنهم القادة... تجعلهم ينزفون."
+
+</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title">بوكر الملك</div>
+        <div class="event-description">"كانوا يتقززون من الدماء... لكن يشعرون بالنشوة لرؤيتها تنزف."</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title"> عروش على الحافة</div>
+        <div class="event-description">"الشجاع الحقيقي ليس من يقتل التنين... بل من يركبه."</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">ليلى والذئب</div>
+        <div class="event-description">"تود جعلي مظلمة كالسماء لتلمع أنت كالنجوم؟ فقط لا تنسى... الظلام يبتلع كل شيء."</div>
+    </div><div class="timeline-event left1">
+        <div class="event-title">مقاتل اليوكونيري</div>
+        <div class="event-description">"لن يكون الجحيم جحيما... إن كنت تحب الطريقة التي يحرقك بها."</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title"> كالسبعة تموتون
+</div>
+        <div class="event-description">"حين لا يتبق امامك شيء لتحرقه... أشعل نفسك."</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title"> الوشوم الأربعة</div>
+        <div class="event-description">"لا عيب في أن تكون فأرًا... إلا إذا كنت وُلدت لتكون صقرًا."</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title"> أوتزي وحرب الروي</div>
+        <div class="event-description">"لن تنفع معك السياسة... سأحتلك ثم نتفاوض."</div>
+    </div><div class="timeline-event left1">
+        <div class="event-title">لصوص الألماس</div>
+        <div class="event-description">"أمي دعت الرب لتحصل على ابن خروف... لكنها طوال حياتها ربّت ذئبا."
+
+</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title">أحمر الكاردينال</div>
+        <div class="event-description">"إذا كان التقبيل لغة الحب... هل تقبلين بمحادثة معي؟"
+
+</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title">بوابة سيبيريا</div>
+        <div class="event-description">"لا أسمح لك بجرح قلبي... لكن شفاهي أسمح لك."</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">الجلوس على الضبع</div>
+        <div class="event-description">"لا عيب في أن تكون فأرًا... إلا إن كنت قد وُلدت لتكون صقرًا."
+
+</div>
+    </div><div class="timeline-event left1">
+        <div class="event-title">منزل الحقيقة</div>
+        <div class="event-description">"إن لم يُقدّر لنا أن ننجو معًا... فلتحترق سويا إذن!"</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title">آنسة ويكيبيديا</div>
+        <div class="event-description">"سابقًا كانوا يصرخون باسمها شجاعةً منهم... والآن هم يهمسونه خوفًا منها."</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title">حفيد الأوساما</div>
+        <div class="event-description">"لنتفاوض سلميًا بدون أسلحة."
+"حسنًا... ضعي أعينك جانبا."</div>
+    </div>
+    <div class="timeline-event right2">
+        <div class="event-title">الفاء للأفاعي</div>
+        <div class="event-description">"كانت بسيطة جدًا... ببساطة الفيزياء الكمّية."</div>
+    </div>
+    <div class="timeline-event left1">
+        <div class="event-title">حرق الفاديتا</div>
+        <div class="event-description">"الأفعى تغيّر جلدها... وليس أنيابها."</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title"> ميثاق برازيلي</div>
+        <div class="event-description">أفسحي لي ضلعيك... أودّ الخلود في موطني."</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title"> لائحة المئة</div>
+        <div class="event-description">"الكلّ مرّ من جانبي... إلا أنتِ.. مررت من داخلي."</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">وفاة الملك</div>
+        <div class="event-description">"ماذا يحدث للمرء حين يحدق بأعينها؟... تشرق في قلبه شمس."</div>
+    </div>
+    <div class="timeline-event left1">
+        <div class="event-title">لؤلؤ إفريقيا</div>
+        <div class="event-description">"الآخرون كانوا مجرد نذوب... أنتِ كنتِ الطعنة."</div>
+    </div>
+
+    <div class="timeline-event right1">
+        <div class="event-title">فتاة النباتات</div>
+        <div class="event-description">"أيديها كانت دموية... لكن خواتمها ألماسية."</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title">الوالد و الزوج</div>
+        <div class="event-description">"تستطيع تقبيل رجل... أو نحر عنقه."</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">جثة في الغابة</div>
+        <div class="event-description">"لا تكن جزءً من المشكلة... كُن المشكلة بأكملها"</div>
+    </div>
+    <div class="timeline-event left1">
+        <div class="event-title">عملات نقدية</div>
+        <div class="event-description">"الكثير من النمل سيحاول تعليم النحل كيف يُنتج العسل..."</div>
+    </div>
+    <div class="timeline-event right1">
+        <div class="event-title">تاكاهيرو</div>
+        <div class="event-description">"جد ما تحب ودعه يقتلك</div>
+    </div>
+
+    <div class="timeline-event left2">
+        <div class="event-title">الحاكم الجديد</div>
+        <div class="event-description">"وأسند على ضحكتك... تاريخًا من التعب."</div>
+    </div>
+
+    <div class="timeline-event right2">
+        <div class="event-title">السبعة في السبعة</div>
+        <div class="event-description">"وجهها بكامل أفلاكها السبعة... شموسًا لا تغيب."</div>
+    </div>
+    <div class="timeline-event left1">
+        <div class="event-title">عنخ ذابل</div>
+        <div class="event-description">"لا أستطيع رؤية الكارهين... رموشي طويلة جدًا على ذلك."</div>
+    </div>
+<div class="timeline-event right1">
+        <div class="event-title"> حتى منتصف الليل</div>
+        <div class="event-description">"حبا بي... وضعت سكينًا في رقبتي. حبا بك... اريتك اين تقطعي."</div>
+    </div>
+<div class="timeline-event left2">
+        <div class="event-title">اللعب بالنار</div>
+        <div class="event-description">"إنني من طين... قبليني وزيدي الطين بَلّة."</div>
+    </div>
+    </div> 
+    <audio id="bgMusic" loop>
+        <source src="audio/Echo Of Sadness - TURNIQUE - Bensound(MP3_160K).mp3" type="audio/mp3">
+    </audio>
+    
+    <button id="muteBtn"><i class="fas fa-volume-up"></i></button>
+    <script src="script.js"></script>
+    <script>
+    // Generate Stars
+    const starContainer = document.getElementById("stars");
+    for (let i = 0; i < 120; i++) {
+    const star = document.createElement("div");
+    star.classList.add("star");
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.animationDuration = `${1.5 + Math.random() * 2}s`;
+    starContainer.appendChild(star);
+    }
+
+    // Generate Sparkles
+    const sparkleContainer = document.getElementById("sparkles");
+    for (let i = 0; i < 40; i++) {
+    const sparkle = document.createElement("div");
+    sparkle.classList.add("sparkle");
+      sparkle.style.left = `${Math.random() * 100}vw`;
+      sparkle.style.bottom = `${Math.random() * 50}px`;
+      sparkle.style.animationDelay = `${Math.random() * 10}s`;
+      sparkle.style.animationDuration = `${4 + Math.random() * 4}s`;
+    sparkleContainer.appendChild(sparkle);
+    }
+</script>
+</body>
+</html>

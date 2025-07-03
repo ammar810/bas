@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صورنا الجميلة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffcfe0, #e0b3ff);
+      position: relative;
+    }
+
+    /* 🎈 Balloons */
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 20px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: pink;
+      animation: float 18s linear infinite;
+      opacity: 0.3;
+      filter: blur(0.5px);
+    }
+    .balloon::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 20px;
+      background: #ccc;
+      left: 50%;
+      bottom: -20px;
+      transform: translateX(-50%);
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-120vh) rotate(10deg); }
+    }
+
+    /* ❤️ Hearts */
+    .heart {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #ff5ca2;
+      transform: rotate(45deg);
+      animation: floatHeart 16s linear infinite;
+      opacity: 0.2;
+      filter: blur(0.5px);
+    }
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #ff5ca2;
+      border-radius: 50%;
+    }
+    .heart::before { top: -5px; left: 0; }
+    .heart::after { left: -5px; top: 0; }
+
+    @keyframes floatHeart {
+      0% { transform: translateY(0) rotate(45deg); opacity: 0.2; }
+      100% { transform: translateY(-100vh) rotate(45deg); opacity: 0; }
+    }
+
+    /* 🎉 Confetti */
+    .confetti {
+      position: absolute;
+      width: 4px;
+      height: 6px;
+      background-color: gold;
+      animation: fall 9s linear infinite;
+      opacity: 0.25;
+      filter: blur(0.5px);
+    }
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    /* ✨ Title */
+    h1 {
+    position: relative;
+    text-align: center;
+    font-size: 2.5em;
+    color: #b30059;
+    text-shadow: 0 0 10px #fff;
+    z-index: 2;
+    animation: popIn 1.5s ease;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+    <div class="subpage-container">
+  <!-- Background elements -->
+  <div id="balloon-container"></div>
+  <div id="heart-container"></div>
+  <div id="confetti-container"></div>
+        
+        <header>
+            <h1><i class="fas fa-camera-retro"></i> Our Beautiful Moments <span>📸</span></h1>
+            <a href="secret.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+        </header>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item placeholder">
+            <img src="images/WhatsApp Image 2025-05-21 at 20.43.30_fffc871f.jpg" class="zoomable-image" width="300" height="250">  
+        </div>
+        <div id="imageModal" class="image-modal">
+            <span class="close-modal">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+            
+            <div class="gallery-item placeholder">
+            <img src="images/Picsart_24-07-03_15-17-08-155.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/Picsart_24-07-03_15-24-13-474.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/Picsart_24-07-03_15-52-20-950.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+             <div class="gallery-item placeholder">
+            <img src="images/_ليتك تستطيع أن ترى الطريقة التي أنظر بها إليك، ليتك تستطيع أن ترى كيف تبدو بداخلي ليتني أستطيع أن أريك كيف (H.heic" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/Screenshot_2024-09-22-09-21-54-16_1c337646f29875672b5a61192b9010f9.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/_viralvideos _fürdich _vaiprofycaramba _tutorial _trendingvideo _riyadhseason _vairal _fypシ゚viral🖤tiktok _iloveyou _zodiacsigns _voiceeffects _fr(JP.jpeg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/Screenshot_2024-11-14-16-43-03-56_1c337646f29875672b5a61192b9010f9.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/Screenshot_2025-01-06-19-19-43-65_1c337646f29875672b5a61192b9010f9.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/Screenshot_2025-02-16-21-52-06-41_1c337646f29875672b5a61192b9010f9.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/Screenshot_2025-03-11-18-45-00-66_1c337646f29875672b5a61192b9010f9.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/Screenshot_2025-05-11-18-28-30-93_1c337646f29875672b5a61192b9010f9.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/أنتِ قوّةٌ مدهشة 💜(JPG).jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/الى حبيب الروح والقلب ❤️💍 _منشن _حب _اكسبلور_فولو _اكسبلور_explore _ريلز_explor _ريلز _صور_دي(.webp" class="zoomable-image" width="300" height="250">  
+            </div>  
+             <div class="gallery-item placeholder">
+            <img src="images/IMG_20250703_202403_530.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+             <div class="gallery-item placeholder">
+            <img src="images/IMG_20250703_202405_062.jpg" class="zoomable-image" width="300" height="250">  
+            </div>
+            <div class="gallery-item placeholder">
+            <img src="images/IMG_20250703_202406_365.jpg" class="zoomable-image" width="300" height="250">  
+            </div>          
+        </div>
+    </div>
+    <audio id="bgMusic" loop>
+        <source src="audio/موسيقى بروحي فتاة(MP3_160K).mp3" type="audio/MP3">
+    </audio>
+    
+    <button id="muteBtn"><i class="fas fa-volume-up"></i></button>  
+    
+  <script>
+    // 🎈 Balloons
+    for (let i = 0; i < 25; i++) {
+      const b = document.createElement('div');
+      b.className = 'balloon';
+      b.style.left = Math.random() * 100 + 'vw';
+      b.style.backgroundColor = ['#ff69b4', '#ffc0cb', '#ffd1dc', '#ffb6c1'][i % 4];
+      b.style.animationDuration = 14 + Math.random() * 6 + 's';
+      document.getElementById('balloon-container').appendChild(b);
+    }
+
+    // 💖 Hearts
+    for (let i = 0; i < 20; i++) {
+      const h = document.createElement('div');
+      h.className = 'heart';
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.bottom = Math.random() * 100 + 'px';
+      h.style.animationDelay = Math.random() * 8 + 's';
+      document.getElementById('heart-container').appendChild(h);
+    }
+
+    // 🎉 Confetti
+    for (let i = 0; i < 35; i++) {
+      const c = document.createElement('div');
+      c.className = 'confetti';
+      c.style.left = Math.random() * 100 + 'vw';
+      c.style.backgroundColor = ['gold', '#ff69b4', '#f0f', '#ffb347'][i % 4];
+      c.style.animationDelay = Math.random() * 6 + 's';
+      document.getElementById('confetti-container').appendChild(c);
+    }
+  </script>
+      <script src="script.js"></script>
+</body>
+</html>

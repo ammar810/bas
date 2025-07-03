@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Video</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 200vh; /* علشان يبقى في Scroll */
+      background-image: url("images/undefined\ -\ Imgur.png"); /* صورة النجوم */
+      background-size: cover;
+      background-repeat: repeat-y;
+      background-position: center;
+      animation: moveStars 60s linear infinite;
+    }
+
+    @keyframes moveStars {
+      0% {
+        background-position: center 0;
+      }
+      100% {
+        background-position: center 1000px;
+      }
+    }
+
+    .content {
+      padding: 100px;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+    }
+  </style>
+
+</head>
+<body>
+    <div class="subpage-container">
+  
+        <header>
+            <h1><i class="fas fa-video"></i> Our Video Memories <span>🎥</span></h1>
+            <a href="secret.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+        </header>
+         <div class="intro-video-container">
+  <video id="introVideo" autoplay muted playsinline controls style="width: 100%; max-width: 600px; border-radius: 10px;">
+  <source src="videos/11.mp4" type="video/mp4">
+</video>
+
+</div>
+         <button onclick="unmuteVideo()">🔊 شغل الصوت</button>
+
+        <div class="videos-container">
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/12.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/_keşfet _keşfetteyiz _yeni _new _art _sanat _yazı _canımannem _iyikivarsın _iyiki _ahmet _canımbabam _🌺 _iloveyou _❤️ _seniseviyorum(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/_مريض_بجمالها 💗 __mnw_112 ♡(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/DJUWH-2sfj6(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/DLS34V2Tkzb(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/Drown in ur eyes - غارق في عينيك 🦉🇩🇿🌊_._._اذا عجبك المقطع حياك الله في حسابي وضيفني للمزيد _h(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/Hug-عناق 🦉🫂_._._اذا يعجبك هذا النوع من المحتوى حياك الله في حسابي و ضيفني _hf.xz6 _Follow me for mor(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/I_ve always wanted to make this trend in the Starfield Library 🥹💫__Have you been here yet_ __📍Starfield Suwon _111-14 Jeongja-dong Jangan-gu_ Suwon(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/If only I could stare blankly with you in this atmosphere ✨__sunset _fyb(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/Sevgi iyileştirir ✨(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/أنتِ بين قلبي ونبضاته🥺__♥️ ♥️___أحبك_ _حبي_ _حياتي_ _عمري __قلبي __كل_عام_وانت_حبيبتي_ _صب(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/💞🫀__اكسبلوررexplorer  _الشعب_الصيني_ماله_حل😂  _مجرد________ذووووووق🎶🎵💞 __ستوريات _virale _fyp_(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/إن أشرقتِ أَيْرَىٰ لَهُنَّ ضِياءُ _(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/اكتبوا لنا اقتباس _يعجبكم 📜_؟__Followe Me _ _vij2._ __لايـك وسيـف ،عجـبتك الصـفحة _تابعـني مـن ف(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/الأشياءُ البُنِّيةُ فاتنةٌ دومًا__explore _follow _like _rails(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/الفولو بياخد ثانيه منك بس بفرحني من كل قلبي🖤🪽🫂._‏_explorepage _اكسبلور _اقتباسات _حب _حزن (.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/انا أصلا مشكلتي في عينها 🪽🤍(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/انتي♥️___حب _حبيبتي _عشق _fyp _رسالة _غرام _🖤 _فولو(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/بحسها._._._._._.__reels _music _instagram _reelsinstagram _explore _lyrics _like _bigsam _engagementelevation(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/بل تُعشق✨(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/تابع صفحتي ربما  تجد مايعبر عن مشاعرك ❤️‍🩹_من _الاكسبلور فولو _)_فولو  للحساب ياحلوو _(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/تابعني للمزيد..🤎___فولو _اكسبلور _لايك _اكسبلور_explore _كتاب _ريلز _reels _video _like _coment _followme _fol_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/تاهت عيوني في بحور عيونها ♥️___شعر _غزل _قصايد _روايات _اقتباسات(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/ترقص رقصة سمرة 🖤🖤(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/جاءت تقولُ لهُ من شِدَّةِ اللَهَف_الاسـتـوري مـهـم _تـابـعـني♡_. __اقتباسات _عبارات _م(M.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/21.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/حتى صوتها فيروزي 🤍___بدون_موسيقى _فيروز _صباح_الخير _فيروزيات _عمان(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+                        <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/حسابي مخصص للروايات ✨🕯️ ___books _bookstagram _wattpadbooks _booksandcoffee _bookssale _bookstan_رواية _روايات _واتب(M.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+                        <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/خذ نظرة على ستوري🤎✨___فولو _اكسبلور _لايك _اكسبلور_explore _كتاب _ريلز _reels _video _like _coment _followm(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+                        <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/خلــيــــكـــــــــــي جنــــــبـــــــــي♥✨(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/سأضحي لأراك سعيدًا._._._._._._._._._._.__اكسبلور_فولو _كتاباتي _متابعين _العراق _مصر(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/شمس النهار ☀️🧡___اكسبلور_فولو __دانيةـمحايري __لايك __ريلز_انستغرام __ريلز_انستغرام __ا(M.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/ضحكت ثاني نفس الضحكة وراحت ماشية___كلاسيك__قديم_وديع_الصافي(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/عيونك ، و القهوة ، و فيروز 🐈☕️___اكسبلور_explore _اكسبلور_فولو _اكسبلور _فيديوهات _تصويري (.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/عيونها قصه_ ❤(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/غاب الليل وبعدا بتخطر على بالو ♥️✨️(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy"style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/في حينَ أنهم يَرَونك _fyp _explore _viral _foryou _تصميمي _fypシ _الشعب_الصيني_ماله_حل😂😂🙋🏻‍♂️🇧(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/قومي تنرقص يا صبية ___تسعينات __ستوريات __قديم(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/كقهوةِ الصباح 🤎__قهوة _عيون _بنية _صباح _سكون _like _explore _كتاباتي _fyp _كتابة _(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/كلك ع بعضك حلو..🌷(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/لا عاش قلبي إذ نوى يَنْسَاهَا... _الاسـتـوري مـهـم _تـابـعـني♡_. _. __اقتباسات _عبارات _مش(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/لاحد يزعل العسل يويله منها 😾🥹🎀_(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/لتلتقي قلوبنا هنا...🤎___ادب _كتابة _نصوص_ادبية _نثر _مشاعر _شعر _خواطر _نص_عربي _اقتباسات _(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/لطلب او الاستفسار الرابط في البايو نوفر لكم كل ماتريدون وننسق لكم هداياكم ب كل حب _محل_(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/لطلب او الاستفسار الرابط في البايو نوفر لكم كل ماتريدون وننسق لكم هداياكم ب كل حب _محل_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/لطلب او الاستفسار الرابط في البايو نوفر لكم كل ماتريدون وننسق لكم هداياكم ب كل حب _محل_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/لطلب او الاستفسار الرابط في البايو نوفر لكم كل ماتريدون وننسق لكم هداياكم ب كل حب _محل_3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/لما يحبك الله، يفتح لك عين القلب__وتشوف كل شي على حقيقته، حتى لو كان مؤلم._✨ _اللهم نور (M.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/ما قيل في العيون ؛ منشن __ _Followe Me _ _vij2._ __لايـك وسيـف ،عجـبتك الصـفحة _تابعـني مـن فضـلك 🠨.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/مايشبهك في طلتك غير القمر🥺__♥️ ♥️___أحبك_ _حبي_ _حياتي_ _عمري __قلبي __كل_عام_وانت_حبيبتي(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/متابعة ✨💚_مشهد _reels _اكسبلور(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/مـنـشـ_ـن🩷🌷_الاسـتـوري مـهـم _تـابـعـني♡_. __اقتباسات _عبارات _مشاعر _خواطر _شعر _حب _(M.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/من يرقص معي 💃🕺😍___عائلة _والدين _زوج_وزوجة _زواج __حياة_الزوجية _حب _زوجة _متزوج __المغر(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/منشن (_)؟ 🧋✨.__0_xxin9 __Follow me _jkadrin1 _._._._هاشتاقات مو مهمة🫶🏻.__اكسبلور _السعودية _اكسبلور_فو(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/منشن 🤎🫶🏻_حب _غزل _شعر _video _drawing _trend ._._._._._._._(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/منشنن للعيونهن حلوة 😍🦋♥️_._._._.__تصويري _اسطنبول _instagram _اكسبلور_فولو _اكسبلور_explore _سم(M.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/نظراتها😭😭❤️___explore __اكسبلور(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+                        <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/والنسمة بتمرق من حدها تعطر هالمدا 🤍🌏___كلاسيك_موسيقى_بديلة_explorepage _viralreels _music(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/وانتي اجملها ❤️(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/وتسألُني؛ أتعشقُني؟_تخيّل.. إنّها تسأل__بربك، كيف أسمعُها؟_ألا من نفسها تخجل؟_ألم تسمع(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/وحياة عينيك وفداها عنيا .. أنا بحبّك قد عنيا ❤️_._._._الثنائي الكلاسيكي الجميل _loujain_yazan__(M.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/وعرفوا انك حبيبي___كلاسيك__قديم_فيروز(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/وغلاوة امك تعمل فولو 😂♥️_._. _j0kes_18 _.___________________________________‏‌‌‌‌‌‎_إقتباسات _أغار _ا(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/يا حُباً وَجدتُ بهِ سلاماً لروَحُي💙(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/يا خير من سكن الفؤاد ولها يلين🥺__♥️ ♥️___أحبك_ _حبي_ _حياتي_ _عمري __قلبي __كل_عام_وانت_حب(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/‎هدايا الدمام آلسعوديه اطلب الان_‎للحجز او الاستفسار التواصل على_        (0501748177)_‎_ا(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/‏كأنها مِثلَ ما تهواهُ قد خُلقت_الاسـتـوري مـهـم _تـابـعـني♡__اقتباسات _عبارات _مشاع(M.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/⁨_وأنت الختام __شعر _شعر_شعبي_عراقي _شعر_عراقي _شعراء⁩(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/✨بالصُدفة تقابِل بنتِ جميلة بتخطَف قلبَك خَطف✨__cairokee _._.__explore _cairokee _foryou _كايروكي _احلا(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/❤️❤️___ريلز_explor _love _art _sy _تركيا _بغداد _دبي _دمشق _dubai _اكسبلور _explore _egypt _syria _reels __follow_me _fo(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div> 
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/💞🫀__اكسبلوررexplorer  _الشعب_الصيني_ماله_حل😂  _مجرد________ذووووووق🎶🎵💞 __ستوريات _virale _fyp_(.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/🍁✨منشن(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+ <div class="video-item">
+                <div class="video-placeholder">
+                    <video controls width="100%" loading="lazy" style="max-width: 600px; border-radius: 10px;">
+                        <source src="videos/_happyvalentinesday  لمن تبغيو ترسلوها(MP4).mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+
+    </div>
+
+
+    <script>
+        function unmuteVideo() {
+    const video = document.getElementById('introVideo');
+    video.muted = false;
+    video.play(); // إعادة التشغيل بالصوت
+  }
+        window.addEventListener('DOMContentLoaded', function () {
+    let lastScrollY = 0;
+
+    document.querySelectorAll('.video-placeholder video').forEach(video => {
+        // نخزن موقع السكرول لما المستخدم يبدأ يشغل الفيديو
+        video.addEventListener('play', () => {
+            lastScrollY = window.scrollY;
+        });
+
+        // fallback: لو وقف الفيديو
+        video.addEventListener('pause', () => {
+            setTimeout(() => {
+                window.scrollTo({ top: lastScrollY, behavior: 'smooth' });
+            }, 200);
+        });
+    });
+
+    // نرصد الخروج من fullscreen لأي فيديو
+    document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement) {
+        setTimeout(() => {
+            window.scrollTo({ top: lastScrollY, behavior: 'smooth' });
+        }, 300); // تأخير بسيط بعد الخروج من fullscreen
+    }
+});
+});
+// stop any video except the last one
+document.addEventListener('DOMContentLoaded', function () {
+    const allVideos = document.querySelectorAll('.video-placeholder video');
+
+    allVideos.forEach(video => {
+        video.addEventListener('play', () => {
+            allVideos.forEach(otherVideo => {
+                if (otherVideo !== video) {
+                    otherVideo.pause();
+                }
+            });
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const videos = document.querySelectorAll('.video-placeholder video');
+
+    videos.forEach(video => {
+        // حفظ المكان لتصحيح السكرول كمان
+        let lastScrollY = 0;
+
+        video.addEventListener('play', () => {
+            lastScrollY = window.scrollY;
+
+            // لما الفيديو يدخل fullscreen
+            video.addEventListener('fullscreenchange', () => {
+                if (document.fullscreenElement === video) {
+                    video.style.objectFit = 'contain';
+                } else {
+                    video.style.objectFit = 'cover';
+                    setTimeout(() => {
+                        window.scrollTo({ top: lastScrollY, behavior: 'smooth' });
+                    }, 300);
+                }
+            });
+        });
+
+        // fallback لتشغيل واحد فقط
+        video.addEventListener('play', () => {
+            videos.forEach(other => {
+                if (other !== video) other.pause();
+            });
+        });
+    });
+
+    // دعم بعض المتصفحات (fullscreenchange على document)
+    document.addEventListener('fullscreenchange', () => {
+        videos.forEach(video => {
+            if (document.fullscreenElement === video) {
+                video.style.objectFit = 'contain';
+            } else {
+                video.style.objectFit = 'cover';
+            }
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const intro = document.getElementById("intro-video");
+    const pageContent = document.getElementById("page-content");
+    const video = document.getElementById("mainVideo");
+
+  
+    // تحميل الفيديوهات لما تظهر
+    const lazyVideos = [].slice.call(document.querySelectorAll("#page-content video"));
+
+    if ("IntersectionObserver" in window) {
+        const videoObserver = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    for (const source of video.querySelectorAll("source")) {
+                        source.src = source.dataset.src;
+                    }
+                    video.load();
+                    videoObserver.unobserve(video);
+                }
+            });
+        });
+
+        lazyVideos.forEach(function (video) {
+            for (const source of video.querySelectorAll("source")) {
+                source.dataset.src = source.src;
+                source.src = "";
+            }
+            videoObserver.observe(video);
+        });
+    }
+});
+    </script>
+</body>
+</html>

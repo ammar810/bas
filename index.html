@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+     html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+      background: linear-gradient(to bottom, #2c003e, #000);
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      text-align: center;
+      padding-top: 100px;
+      font-size: 32px;
+      font-family: 'Tahoma', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="bgCanvas"></canvas>
+
+
+        <!-- <div class="profile-bg"></div> -->
+        
+        <div class="birthday-card animate__animated animate__zoomIn">
+            <h1 class="animate__animated animate__pulse animate__infinite">¡Feliz Cumpleaños! <span>🎉</span></h1>
+            <h2 class="animate__animated animate__fadeIn animate__delay-1s">Happy Birthday My Queen! <i class="fas fa-crown"></i></h2>
+            <p class="animate__animated animate__fadeIn animate__delay-2s">"كل عام وأنتِ أكثر من رائعة"</p>
+            
+            <div class="balloons">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+            
+            <button id="enterBtn" class="animate__animated animate__bounceIn animate__delay-3s">
+                <span>ادخلي إلى عالمك السري</span>
+                <i class="fas fa-lock"></i>
+            </button>
+        </div>
+        
+        <audio id="bgMusic" loop>
+            <source src="audio/Happy Birthday to You (Soft Piano)(MP3_160K).mp3" type="audio/MP3">
+        </audio>
+        
+        <button id="muteBtn"><i class="fas fa-volume-up"></i></button>
+    </div>
+    
+    <!-- نافذة كلمة المرور -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2><i class="fas fa-key"></i> كلمة السر السرية</h2>
+            <p>أدخلي الكلمة السحرية للدخول:</p>
+            <div class="input-container">
+                <input type="password" id="passwordInput" placeholder="أدخلي كلمة السر هنا...">
+                <i class="fas fa-eye-slash toggle-password"></i>
+            </div>
+            <button id="submitPassword"><i class="fas fa-unlock-alt"></i> تأكيد</button>
+            <p id="hintText">تلميح: رقم ما بيعرفو غيرنا</p>
+            <p id="errorMsg" class="error"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+    const canvas = document.getElementById("bgCanvas");
+    const ctx = canvas.getContext("2d");
+
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
+
+    window.addEventListener("resize", () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    const stars = Array(100).fill().map(() => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      r: Math.random() * 1.5 + 0.5,
+      d: Math.random() * 1
+    }));
+
+    const fireworks = [];
+
+    function drawStars() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = "white";
+      stars.forEach(s => {
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+
+    function updateStars() {
+      stars.forEach(s => {
+        s.y += s.d;
+        if (s.y > height) {
+          s.y = 0;
+          s.x = Math.random() * width;
+        }
+      });
+    }
+
+    function Firework() {
+      this.x = Math.random() * width;
+      this.y = height;
+      this.r = 2;
+      this.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+      this.particles = [];
+
+      for (let i = 0; i < 30; i++) {
+        const angle = Math.random() * 2 * Math.PI;
+        const speed = Math.random() * 4 + 1;
+        this.particles.push({
+          x: this.x,
+          y: this.y,
+          vx: Math.cos(angle) * speed,
+          vy: Math.sin(angle) * speed,
+          alpha: 1
+        });
+      }
+    }
+
+    Firework.prototype.update = function() {
+      this.particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= 0.02;
+      });
+    }
+
+    Firework.prototype.draw = function(ctx) {
+      ctx.fillStyle = this.color;
+      this.particles.forEach(p => {
+        if (p.alpha > 0) {
+          ctx.globalAlpha = p.alpha;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+      ctx.globalAlpha = 1;
+    }
+
+    function loop() {
+      drawStars();
+      updateStars();
+
+      if (Math.random() < 0.05) {
+        fireworks.push(new Firework());
+      }
+
+      fireworks.forEach((f, i) => {
+        f.update();
+        f.draw(ctx);
+        if (f.particles.every(p => p.alpha <= 0)) {
+          fireworks.splice(i, 1);
+        }
+      });
+
+      requestAnimationFrame(loop);
+    }
+
+    loop();
+    </script>
+</body>
+</html>
